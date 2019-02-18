@@ -1,10 +1,7 @@
 import System.IO
 
---melem :: [a] -> Int -> Maybe a
 melem :: [a] -> Int -> a
---melem [] _ = Nothing
 melem (x:xs) n
---   | n <= 0 = Nothing
    | n ==1 = x
    | otherwise = melem xs (n-1)
 
@@ -15,15 +12,17 @@ mreplace (x:xs) n a
  | n == 1 = [a] ++ xs
  | otherwise = [x] ++ mreplace xs (n-1) a
 
-
-
 mpermutefun ::  Integral a => a -> a -> a
-mpermutefun n m = 1 + mod (2*m+1) n
+mpermutefun n m = 1 + mod (8831*m) n
+-- 8831 is prime number is big enough for our usage
 
-
---mpermute :: [a] -> [Maybe a]
 mpermute :: [a] -> [a]
 mpermute x = let ml=length x in [ melem x (mpermutefun ml m) | m <- [1..ml] ]
+
+
+
+
+
 
 main = do
   contents <- readFile "devCards.csv"
