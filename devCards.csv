@@ -12,6 +12,6 @@
 "Git: pushing in git to specific remote repository ","git push <repository name> <branch name>","",""
 "Git: pushing while setting the default remote for some branch","git push -u <remote name> <branch name>","",""
 "Git: plotting the graph of branching history","git log --graph","",""
-"Haskell: browsing for a specific function/type" , ":browse <function/type name>" ,"",""
+"Haskell: list of types/functions available in some module" , ":browse <module name>" ,"",""
 "Haskell: setting the prompt name" , ":set prompt <some name>" ,"",""
 "Stack: running GHCI with a specific extension of the compiler","stack ghci --ghci-options <name of extension>","",""
