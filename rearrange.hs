@@ -14,7 +14,7 @@ mreplace (x:xs) n a
 
 mpermutefun ::  Integral a => a -> a -> a
 mpermutefun n m = 1 + mod (8831*m) n
--- 8831 is prime number is big enough for our usage
+-- 8831 is a prime number that is big enough for our usage
 
 mpermute :: [a] -> [a]
 mpermute x = let ml=length x in [ melem x (mpermutefun ml m) | m <- [1..ml] ]
